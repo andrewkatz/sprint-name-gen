@@ -205,7 +205,8 @@ ADJECTIVES = [
   "Wheedling",
   "Withering",
   "Zealous",
-  "Acoustic"
+  "Acoustic",
+  "Braindead"
 ]
 
 NOUNS = [
