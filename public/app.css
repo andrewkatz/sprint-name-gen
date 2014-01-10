@@ -1,0 +1,39 @@
+body
+{
+  background: #F7F9FE;
+  text-align: center;
+  padding: 30px;
+}
+
+h1
+{
+  font-family: "News Cycle", sans-serif;
+  color: #CBDBE0;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+span.sprint-name
+{
+  color: #BED2D9;
+  font-family: "News Cycle", sans-serif;
+  font-size: 75px;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+a
+{
+  color: #DCE8EB;
+  font-family: "News Cycle", sans-serif;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+.footer
+{
+}

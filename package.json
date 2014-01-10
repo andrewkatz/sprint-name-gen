@@ -1,0 +1,20 @@
+{
+  "name": "sprint-name-gen",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Katz",
+  "license": "MIT",
+  "dependencies": {
+    "logfmt": "~0.18.1",
+    "express": "~3.4.7",
+    "express3-handlebars": "~0.5.0",
+    "underscore": "~1.5.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
