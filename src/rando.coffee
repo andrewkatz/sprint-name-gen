@@ -209,6 +209,7 @@ ADJECTIVES = [
 ]
 
 NOUNS = [
+  "Britches",
   "Cat",
   "Princess",
   "Zebra",
@@ -483,6 +484,7 @@ NOUNS = [
 ]
 
 VERBS = [
+  "Wiggle",
   "Aggregate",
   "Architect",
   "Benchmark",
