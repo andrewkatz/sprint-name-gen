@@ -10,16 +10,12 @@ app.engine("handlebars", exphbs())
 app.set("view engine", "handlebars")
 
 app.get "/", (req, res) =>
-  sprintName = rando.randomSprintName()
+  sprintName = rando.randomSprintName(req.query.pattern)
 
   if req.query.format is "json"
-    res.json(
-      sprintName: sprintName
-    )
+    res.json(sprintName: sprintName)
   else
-    res.render("index",
-      sprintName: sprintName
-    )
+    res.render("index", sprintName: sprintName)
 
 port = process.env.PORT or 5000
 app.listen port, ->
