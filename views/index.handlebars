@@ -2,16 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link href="//fonts.googleapis.com/css?family=Allan|News+Cycle" rel="stylesheet" type="text/css">
-  <link href="app.css" rel="stylesheet" type="text/css">
   <title>Sprint Name Generator</title>
+
+  <link href="//fonts.googleapis.com/css?family=Allan|News+Cycle" rel="stylesheet" type="text/css">
+  <link href="base.css" rel="stylesheet" type="text/css">
+
+  {{#if nsfw}}
+  <link href="nsfw.css" rel="stylesheet" type="text/css">
+  {{else}}
+  <link href="sfw.css" rel="stylesheet" type="text/css">
+  {{/if}}
 </head>
 <body>
+  {{#if nsfw}}
+  <h1>How about this shit?</h1>
+  {{else}}
   <h1>Your sprint name is</h1>
+  {{/if}}
   <span class="sprint-name">{{ sprintName }}</span>
-  <p class="footer">
-    <a href="http://andrewkatz.net">Made by Andrew Katz</a><br/>
-    <a href="https://github.com/andrewkatz/sprint-name-gen">Source</a>
-  </p>
 </body>
 </html>
