@@ -21,7 +21,7 @@ class Rando
     sprintName = ""
     usedWords = [""]
 
-    generatedPattern = if pattern? then @_generatePattern(pattern) else null
+    generatedPattern = if pattern? then @_generatePattern(pattern) else []
     chosenPattern = if generatedPattern.length > 0 then generatedPattern else @_randomPattern()
 
     underscore.each chosenPattern, (type) =>
