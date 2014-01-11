@@ -83,8 +83,6 @@ ADJECTIVES = [
   "Chinese",
   "Russian",
   "French",
-  "Fuckable",
-  "Shitty",
   "Brown",
   "Poopy",
   "Broken",
