@@ -430,7 +430,8 @@ bank =
     "Woodchuck",
     "Yak",
     "Zebra",
-    "Zebu"
+    "Zebu",
+    "Sushi"
   ]
 
   verbs: [
