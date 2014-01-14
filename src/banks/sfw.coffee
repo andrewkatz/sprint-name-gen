@@ -154,10 +154,16 @@ bank =
     "Withering",
     "Zealous",
     "Acoustic",
-    "Braindead"
+    "Braindead",
+    "Hot"
   ]
 
   nouns: [
+    "Scooter",
+    "Moon",
+    "Box",
+    "Sun",
+    "Uncle",
     "Britches",
     "Cat",
     "Princess",

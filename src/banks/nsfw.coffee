@@ -25,10 +25,25 @@ bank =
     "Sexual",
     "Sexy",
     "Seductive",
-    "Ginger"
+    "Ginger",
+    "Hot",
+    "Alaskan",
+    "Sensitve"
   ]
 
   nouns: [
+    "Balls",
+    "Cleveland",
+    "Steamer",
+    "Blumpkin",
+    "Pipeline",
+    "Karl",
+    "Scooter",
+    "Box",
+    "Moon",
+    "Nipple",
+    "Boob",
+    "Tit",
     "Ass",
     "Bear",
     "Beaver",
