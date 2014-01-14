@@ -28,7 +28,8 @@ bank =
     "Ginger",
     "Hot",
     "Alaskan",
-    "Sensitve"
+    "Sensitve",
+    "Occupied"
   ]
 
   nouns: [
@@ -98,7 +99,11 @@ bank =
     "Lick",
     "Massage",
     "Milk",
-    "Tickle"
+    "Tickle",
+    "Blow",
+    "Suck",
+    "Nuzzle",
+    "Cuddle"
   ]
 
   conjunctions: [
