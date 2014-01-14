@@ -159,6 +159,7 @@ bank =
   ]
 
   nouns: [
+    "Factory",
     "Scooter",
     "Moon",
     "Box",

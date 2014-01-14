@@ -33,6 +33,7 @@ bank =
   ]
 
   nouns: [
+    "Factory",
     "Balls",
     "Cleveland",
     "Steamer",
