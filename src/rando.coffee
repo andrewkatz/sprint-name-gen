@@ -19,7 +19,7 @@ NUM_PATTERNS = 4
 class Rando
   VOWELS = ["A", "E", "I", "O", "U"]
 
-  @randomSprintName: (bank, pattern) ->
+  randomSprintName: (bank, pattern) ->
     sprintName = ""
     usedWords = [""]
 
@@ -35,7 +35,10 @@ class Rando
           when ADJECTIVE   then randomWord = @_randomWord(bank.adjectives)
           when NOUN        then randomWord = @_randomWord(bank.nouns)
           when VERB        then randomWord = @_randomWord(bank.verbs)
-          when CONJUNCTION then randomWord = @_randomWord(bank.conjunctions)
+          when CONJUNCTION
+            randomWord = @_randomWord(bank.conjunctions)
+            if currentWordIndex is 0
+              randomWord = @_capitalizeFirstLetter(randomWord)
 
       lastWord = usedWords[usedWords.length - 1]
       usedWords.push(randomWord)
@@ -50,7 +53,7 @@ class Rando
 
     sprintName
 
-  @_generatePattern: (pattern) ->
+  _generatePattern: (pattern) ->
     uppercasePattern = pattern.toUpperCase()
     generatedPattern = []
 
@@ -68,18 +71,24 @@ class Rando
     console.log("Got pattern: ", generatedPattern)
     generatedPattern
 
-  @_randomPattern: ->
+  _randomPattern: ->
     randomInt = @_randomInt(0, NUM_PATTERNS - 1)
     PATTERN_MAP[randomInt]
 
-  @_randomInt: (min, max) ->
+  _randomInt: (min, max) ->
     Math.floor(Math.random() * (max - min + 1)) + min
 
-  @_randomWord: (wordList) ->
+  _randomWord: (wordList) ->
     wordList[@_randomInt(0, wordList.length - 1)]
 
-  @_startsWithAVowel: (word) ->
+  _capitalizeFirstLetter: (word) ->
+    word.charAt(0).toUpperCase() + word.slice(1)
+
+  _startsWithAVowel: (word) ->
     firstCharacter = word.charAt(0)
     ["A", "E", "I", "O", "U"].indexOf(firstCharacter) > -1
 
-module.exports = Rando
+createGenerator = ->
+  new Rando()
+
+module.exports = createGenerator

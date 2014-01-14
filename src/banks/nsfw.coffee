@@ -87,8 +87,8 @@ bank =
   ]
 
   conjunctions: [
-    "A",
-    "The",
+    "a",
+    "the",
     "Her",
     "His",
     "My",

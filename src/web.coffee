@@ -18,15 +18,15 @@ sfwBank = require("./banks/sfw.js")
 app.get "/", (req, res) =>
   nsfw = req.query.nsfw is "yes"
   bank = if nsfw then nsfwBank else sfwBank
-  sprintName = rando.randomSprintName(bank, req.query.pattern)
+  generator = rando()
+  sprintName = generator.randomSprintName(bank, req.query.pattern)
 
   if req.query.format is "json"
     res.json(sprintName: sprintName)
   else
     res.render("index",
       sprintName: sprintName
-      nsfw:       nsfw
-    )
+      nsfw:       nsfw)
 
 port = process.env.PORT or 5000
 app.listen port, ->
