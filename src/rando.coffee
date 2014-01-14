@@ -1,5 +1,3 @@
-underscore = require("underscore")
-
 # word types
 ADJECTIVE   = 0
 NOUN        = 1
@@ -26,8 +24,7 @@ class Rando
     generatedPattern = if pattern? then @_generatePattern(pattern) else []
     chosenPattern = if generatedPattern.length > 0 then generatedPattern else @_randomPattern()
 
-    currentWordIndex = 0
-    underscore.each chosenPattern, (type) =>
+    for type, currentWordIndex in chosenPattern
       randomWord = ""
 
       while usedWords.indexOf(randomWord) > -1
@@ -57,9 +54,7 @@ class Rando
     uppercasePattern = pattern.toUpperCase()
     generatedPattern = []
 
-    for letterIndex in [0..pattern.length-1]
-      letter = uppercasePattern.charAt(letterIndex)
-
+    for letter in uppercasePattern
       type = switch letter
         when "A" then ADJECTIVE
         when "N" then NOUN

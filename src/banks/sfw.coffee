@@ -430,7 +430,13 @@ bank =
     "Yak",
     "Zebra",
     "Zebu",
-    "Sushi"
+    "Sushi",
+    "Orc",
+    "Troll",
+    "Goblin",
+    "Elf",
+    "Matrix",
+    "Dwarf"
   ]
 
   verbs: [
@@ -467,7 +473,6 @@ bank =
     "Integrate",
     "Iterate",
     "Leverage",
-    "Matrix",
     "Maximize",
     "Mesh",
     "Monetize",
