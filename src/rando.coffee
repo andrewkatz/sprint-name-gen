@@ -17,6 +17,8 @@ PATTERN_MAP = [
 NUM_PATTERNS = 4
 
 class Rando
+  VOWELS = ["A", "E", "I", "O", "U"]
+
   @randomSprintName: (bank, pattern) ->
     sprintName = ""
     usedWords = [""]
@@ -35,7 +37,11 @@ class Rando
           when VERB        then randomWord = @_randomWord(bank.verbs)
           when CONJUNCTION then randomWord = @_randomWord(bank.conjunctions)
 
+      lastWord = usedWords[usedWords.length - 1]
       usedWords.push(randomWord)
+
+      if lastWord is "a" and @_startsWithAVowel(randomWord)
+        sprintName += "n"
 
       sprintName += " " unless currentWordIndex is 0
       sprintName += randomWord
@@ -71,5 +77,9 @@ class Rando
 
   @_randomWord: (wordList) ->
     wordList[@_randomInt(0, wordList.length - 1)]
+
+  @_startsWithAVowel: (word) ->
+    firstCharacter = word.charAt(0)
+    ["A", "E", "I", "O", "U"].indexOf(firstCharacter) > -1
 
 module.exports = Rando
