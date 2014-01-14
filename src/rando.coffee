@@ -24,6 +24,7 @@ class Rando
     generatedPattern = if pattern? then @_generatePattern(pattern) else []
     chosenPattern = if generatedPattern.length > 0 then generatedPattern else @_randomPattern()
 
+    currentWordIndex = 0
     underscore.each chosenPattern, (type) =>
       randomWord = ""
 
@@ -35,7 +36,11 @@ class Rando
           when CONJUNCTION then randomWord = @_randomWord(bank.conjunctions)
 
       usedWords.push(randomWord)
-      sprintName += " " + randomWord
+
+      sprintName += " " unless currentWordIndex is 0
+      sprintName += randomWord
+
+      currentWordIndex++
 
     sprintName
 
