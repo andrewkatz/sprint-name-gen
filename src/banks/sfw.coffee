@@ -15,7 +15,6 @@ bank =
     "Russian",
     "French",
     "Brown",
-    "Poopy",
     "Broken",
     "Curly",
     "Hairy",
