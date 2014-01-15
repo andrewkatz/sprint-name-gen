@@ -1,5 +1,6 @@
 bank =
   adjectives: [
+    "Dirty",
     "Shitty",
     "Fuckable",
     "Fucking",
@@ -33,6 +34,7 @@ bank =
   ]
 
   nouns: [
+    "Nipple",
     "Factory",
     "Balls",
     "Cleveland",

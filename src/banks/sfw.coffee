@@ -1,5 +1,6 @@
 bank =
   adjectives: [
+    "Dirty",
     "Bearded",
     "Fluffy",
     "Fat",
@@ -159,6 +160,7 @@ bank =
   ]
 
   nouns: [
+    "Hippie",
     "Factory",
     "Scooter",
     "Moon",
