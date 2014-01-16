@@ -160,6 +160,7 @@ bank =
   ]
 
   nouns: [
+    "Snow",
     "Hippie",
     "Factory",
     "Scooter",

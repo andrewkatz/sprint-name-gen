@@ -34,6 +34,13 @@ bank =
   ]
 
   nouns: [
+    "Snow",
+    "Cocaine",
+    "Heroin",
+    "Weed",
+    "PCP",
+    "Shroom",
+    "Acid",
     "Nipple",
     "Factory",
     "Balls",
