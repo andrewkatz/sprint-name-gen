@@ -1,5 +1,6 @@
 bank =
   adjectives: [
+    "Shallow",
     "Dirty",
     "Shitty",
     "Fuckable",
