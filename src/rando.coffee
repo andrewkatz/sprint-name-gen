@@ -1,8 +1,8 @@
 # word types
-ADJECTIVE   = 0
-NOUN        = 1
-VERB        = 2
-CONJUNCTION = 3
+ADJECTIVE   = "adjective"
+NOUN        = "noun"
+VERB        = "verb"
+CONJUNCTION = "conjunction"
 
 # pattern map
 PATTERN_MAP = [
@@ -18,37 +18,44 @@ class Rando
   VOWELS = ["A", "E", "I", "O", "U"]
 
   randomSprintName: (bank, pattern) ->
-    sprintName = ""
-    usedWords = [""]
+    sprintName = []
+    usedWords =
+      "adjective":   []
+      "verb":        []
+      "noun":        []
+      "conjunction": []
 
     generatedPattern = if pattern? then @_generatePattern(pattern) else []
     chosenPattern = if generatedPattern.length > 0 then generatedPattern else @_randomPattern()
 
     for type, currentWordIndex in chosenPattern
       randomWord = ""
+      currentIndex = -1
 
-      while usedWords.indexOf(randomWord) > -1
-        switch type
-          when ADJECTIVE   then randomWord = @_randomWord(bank.adjectives)
-          when NOUN        then randomWord = @_randomWord(bank.nouns)
-          when VERB        then randomWord = @_randomWord(bank.verbs)
-          when CONJUNCTION
-            randomWord = @_randomWord(bank.conjunctions)
-            if currentWordIndex is 0
-              randomWord = @_capitalizeFirstLetter(randomWord)
+      wordList = switch type
+        when ADJECTIVE   then bank.adjectives
+        when NOUN        then bank.nouns
+        when VERB        then bank.verbs
+        when CONJUNCTION then bank.conjunctions
 
-      lastWord = usedWords[usedWords.length - 1]
-      usedWords.push(randomWord)
+      while currentIndex < 0 or usedWords[type].indexOf(currentIndex) > -1
+        currentIndex = @_randomIndex(wordList)
 
-      if lastWord is "a" and @_startsWithAVowel(randomWord)
-        sprintName += "n"
+      usedWords[type].push(currentIndex)
+      randomWord = @_randomWord(wordList, currentIndex)
 
-      sprintName += " " unless currentWordIndex is 0
-      sprintName += randomWord
+      if currentWordIndex is 0
+        randomWord = @_capitalizeFirstLetter(randomWord)
 
-      currentWordIndex++
+      lastWord = sprintName[sprintName.length - 1]
 
-    sprintName
+      if lastWord? and lastWord.toLowerCase() is "a" and @_startsWithAVowel(randomWord)
+        sprintName.push("n")
+
+      sprintName.push(" ") unless currentWordIndex is 0
+      sprintName.push(randomWord)
+
+    sprintName.join("")
 
   _generatePattern: (pattern) ->
     uppercasePattern = pattern.toUpperCase()
@@ -73,8 +80,12 @@ class Rando
   _randomInt: (min, max) ->
     Math.floor(Math.random() * (max - min + 1)) + min
 
-  _randomWord: (wordList) ->
-    wordList[@_randomInt(0, wordList.length - 1)]
+  _randomIndex: (wordList) ->
+    @_randomInt(0, wordList.length - 1)
+
+  _randomWord: (wordList, index) ->
+    choiceList = wordList[index]
+    choiceList[@_randomInt(0, choiceList.length - 1)]
 
   _capitalizeFirstLetter: (word) ->
     word.charAt(0).toUpperCase() + word.slice(1)
