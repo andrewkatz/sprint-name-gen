@@ -25,6 +25,7 @@ bank =
   ]
 
   nouns: [
+    ["Porn", "Pron"],
     ["Snow"],
     ["Cocaine", "Heroin", "PCP", "Shroom", "Acid"],
     ["Nipple", "Boob", "Tit"],

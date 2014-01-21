@@ -267,7 +267,6 @@ bank =
     ["Ape"],
     ["Argali"],
     ["Armadillo"],
-    ["Ass"],
     ["Baboon"],
     ["Badger"],
     ["Basilisk"],
