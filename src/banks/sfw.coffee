@@ -522,7 +522,6 @@ bank =
     ["a"],
     ["the"],
     ["Our"],
-    ["Jared's"]
   ]
 
 module.exports = bank
