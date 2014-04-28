@@ -15,7 +15,6 @@ bank =
     ["Chinese"],
     ["Russian"],
     ["French"],
-    ["Brown"],
     ["Broken"],
     ["Curly"],
     ["Hairy"],
@@ -157,6 +156,7 @@ bank =
     ["Acoustic"],
     ["Braindead"],
     ["Hot"],
+    ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Brown"],
   ]
 
   nouns: [
@@ -446,6 +446,13 @@ bank =
     ["Elf"],
     ["Matrix"],
     ["Dwarf"],
+    ["Berry", "Strawberry", "Dirt-berry", "Blueberry", "Raspberry"],
+    ["Mango"],
+    ["Pineapple", "Apple"],
+    ["Banana"],
+    ["Fragrance", "Odor"],
+    ["Sunshine"],
+    ["Shelby"]
   ]
 
   verbs: [
