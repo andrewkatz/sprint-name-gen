@@ -1,33 +1,37 @@
-# set up app
-express = require("express")
-exphbs = require("express3-handlebars")
-logfmt = require("logfmt")
-rando = require("./rando.js")
+express = require('express')
+exphbs = require('express3-handlebars')
+logfmt = require('logfmt')
+rando = require('./rando.js')
 
 app = express()
 app.use(logfmt.requestLogger())
-app.use(express.static(__dirname + "/../public"))
-app.engine("handlebars", exphbs())
-app.set("view engine", "handlebars")
+app.use(express.static(__dirname + '/../public'))
+app.engine('handlebars', exphbs())
+app.set('view engine', 'handlebars')
 
-# load banks
-nsfwBank = require("./banks/nsfw.js")
-sfwBank = require("./banks/sfw.js")
+nsfwBank = require('./banks/nsfw.js')
+sfwBank = require('./banks/sfw.js')
+mjBank = require('./banks/mj.js')
 
-# create route
-app.get "/", (req, res) =>
-  nsfw = req.query.nsfw is "yes"
-  bank = if nsfw then nsfwBank else sfwBank
+banks =
+  sfw: sfwBank
+  nsfw: nsfwBank
+  mj: mjBank
+
+app.get '/', (req, res) =>
+  bankName = req.query.bank || 'sfw'
+  bank = banks[bankName] || sfwBank
+
   generator = rando()
   sprintName = generator.randomSprintName(bank, req.query.pattern)
 
-  if req.query.format is "json"
+  if req.query.format is 'json'
     res.json(sprintName: sprintName)
   else
-    res.render("index",
+    res.render('index',
       sprintName: sprintName
       nsfw:       nsfw)
 
 port = process.env.PORT or 5000
 app.listen port, ->
-  console.log("Listening on " + port)
+  console.log('Listening on ' + port)

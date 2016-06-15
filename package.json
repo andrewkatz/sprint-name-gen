@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/andrewkatz/sprint-name-gen",
   "author": "Andrew Katz",
   "license": "MIT",
   "dependencies": {
