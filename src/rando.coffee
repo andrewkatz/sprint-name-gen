@@ -6,13 +6,12 @@ CONJUNCTION = "conjunction"
 
 # pattern map
 PATTERN_MAP = [
-  [ADJECTIVE , NOUN        , NOUN]     ,
-  [ADJECTIVE , ADJECTIVE   , NOUN]     ,
-  [VERB      , CONJUNCTION , ADJECTIVE , NOUN]
-  [ADJECTIVE , ADJECTIVE   , NOUN      , NOUN]
+  [ADJECTIVE   , NOUN        , NOUN],
+  [ADJECTIVE   , ADJECTIVE   , NOUN],
+  [VERB        , CONJUNCTION , ADJECTIVE , NOUN],
+  [ADJECTIVE   , ADJECTIVE   , NOUN      , NOUN],
+  [CONJUNCTION , ADJECTIVE   , NOUN]
 ]
-
-NUM_PATTERNS = 4
 
 class Rando
   VOWELS = ["A", "E", "I", "O", "U"]
@@ -74,7 +73,7 @@ class Rando
     generatedPattern
 
   _randomPattern: ->
-    randomInt = @_randomInt(0, NUM_PATTERNS - 1)
+    randomInt = @_randomInt(0, PATTERN_MAP.length - 1)
     PATTERN_MAP[randomInt]
 
   _randomInt: (min, max) ->

@@ -58,7 +58,9 @@ bank =
     ['Stuff']
   ]
 
-  verbs: []
+  verbs: [
+    ['']
+  ]
 
   conjunctions: [
     ['the'],
