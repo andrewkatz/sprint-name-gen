@@ -1,4 +1,6 @@
 bank =
+  title: 'Your cannabis shop name is'
+
   adjectives: [
     ['Friendly'],
     ['Green', 'Emerald'],
@@ -16,32 +18,39 @@ bank =
     ['Medical', 'Recreational'],
     ['International'],
     ['Local'],
+    ['Seattle', 'Denver', 'Spokane'],
+    ['Cronic'],
+    ['7', '21', '11', '9', '1'],
+    ['420', '4:20'],
+    ['Paper'],
+    ['Kush']
   ]
 
   nouns: [
-    ['420', '4:20'],
     ['Solutions'],
     ['Bud', 'Buds'],
     ['Leaf', 'Leaves'],
     ['Greens'],
     ['Greenery'],
-    ['Cannabis', 'Marijuana', 'MJ', 'Pot', 'Ganja', 'Weed', 'Grass', 'Reefer'],
+    ['Cannabis'],
+    ['Marijuana'],
+    ['MJ'],
+    ['Pot'],
+    ['Ganja'],
+    ['Weed'],
+    ['Grass'],
+    ['Reefer'],
     ['Shop', 'Market', 'Boutique'],
     ['Herb', 'Herbs'],
-    ['Paper'],
     ['Company'],
     ['Wellness'],
     ['Trees', 'Tree'],
     ['Joint'],
     ['Bong', 'Pipe', 'Paraphernalia', 'Glass'],
     ['Garden'],
-    ['Kush'],
     ['Organics'],
     ['Reefer'],
-    ['Seattle', 'Denver', 'Spokane'],
     ['Street'],
-    ['Cronic'],
-    ['7', '21', '11', '9', '1'],
     ['Grade'],
     ['Collective'],
     ['Haze'],

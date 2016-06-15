@@ -7,18 +7,10 @@
   <link href="//fonts.googleapis.com/css?family=Allan|News+Cycle" rel="stylesheet" type="text/css">
   <link href="base.css" rel="stylesheet" type="text/css">
 
-  {{#if nsfw}}
-  <link href="nsfw.css" rel="stylesheet" type="text/css">
-  {{else}}
-  <link href="sfw.css" rel="stylesheet" type="text/css">
-  {{/if}}
+  <link href="{{bank}}.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  {{#if nsfw}}
-  <h1>How about this shit?</h1>
-  {{else}}
-  <h1>Your sprint name is</h1>
-  {{/if}}
+  <h1>{{title}}</h1>
   <span class="sprint-name">{{ sprintName }}</span>
 </body>
 </html>

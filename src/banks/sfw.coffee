@@ -1,4 +1,6 @@
 bank =
+  title: 'Your sprint name is'
+
   adjectives: [
     ["Dirty"],
     ["Bearded"],
