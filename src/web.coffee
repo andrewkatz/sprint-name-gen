@@ -30,7 +30,8 @@ app.get '/', (req, res) =>
   else
     res.render('index',
       sprintName: sprintName
-      nsfw:       nsfw)
+      nsfw:       bankName is 'nsfw'
+    )
 
 port = process.env.PORT or 5000
 app.listen port, ->
