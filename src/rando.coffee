@@ -6,6 +6,8 @@ CONJUNCTION = "conjunction"
 
 # pattern map
 PATTERN_MAP = [
+  [NOUN        , NOUN],
+  [ADJECTIVE   , NOUN],
   [ADJECTIVE   , NOUN        , NOUN],
   [ADJECTIVE   , ADJECTIVE   , NOUN],
   [VERB        , CONJUNCTION , ADJECTIVE , NOUN],
